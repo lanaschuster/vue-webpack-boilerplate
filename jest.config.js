@@ -7,7 +7,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
   transform: {
-    "^.+\\.vue$": "vue3-jest",
+    "^.+\\.vue$": "@vue/vue3-jest",
     '^.+\\.js$': 'babel-jest',
   },
   moduleNameMapper: {

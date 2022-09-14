@@ -6,10 +6,15 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --passWithNoTests --no-cache",
+    "test:watch": "yarn test -- --watch",
+    "test:staged": "yarn test -- --findRelatedTests",
+    "test:ci": "yarn test -- --coverage",
     "start": "webpack-dev-server --open"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "@vue/vue3-jest": "^29.0.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^29.0.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -30,7 +35,6 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "vue-loader": "^17.0.0",
-    "vue3-jest": "^27.0.0-alpha.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.0"
