@@ -3,7 +3,7 @@ import AppButton from './AppButton';
 export default {
   title: 'Components/AppButton',
   component: AppButton,
-}
+};
 
 const Template = (args) => ({
   components: { AppButton },
