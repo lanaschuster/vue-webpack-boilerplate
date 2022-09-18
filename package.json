@@ -5,6 +5,7 @@
   "author": "Lana Schuster <lanaschuster1@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "postinstall": "husky install",
     "test": "jest --passWithNoTests --no-cache",
     "test:watch": "yarn test -- --watch",
     "test:staged": "yarn test -- --findRelatedTests",

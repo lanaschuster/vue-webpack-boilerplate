@@ -1,9 +1,7 @@
 {
   "env": {
-    "es6": true
-  },
-  "ecmaFeatures": {
-    "modules": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
@@ -21,6 +19,6 @@
       "setWithoutGet": true
     }],
     "quotes": [ 1, "single" ],
-    "semi": [ "error", "always" ],
+    "semi": [ "error", "always" ]
   }
 }

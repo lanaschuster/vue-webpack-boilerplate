@@ -1,6 +1,6 @@
 {
   "*.{js,vue}": [
     "eslint 'src/**' --fix",
-    "npm run test:staged"
+    "yarn test:staged"
   ]
 }
