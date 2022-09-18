@@ -1,6 +1,6 @@
 <template>
-  <button :class=[variant]>
-    <slot></slot>
+  <button :class="[variant]">
+    <slot />
   </button>
 </template>
 
@@ -12,7 +12,7 @@ export default {
       default: 'primary'
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
