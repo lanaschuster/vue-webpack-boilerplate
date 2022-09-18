@@ -17,5 +17,8 @@ module.exports = {
   moduleFileExtensions: ['vue', 'js', 'json'],
   transformIgnorePatterns: [
     '/node_modules/.*',
-  ]
+  ],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+ },
 }
