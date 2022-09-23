@@ -1,9 +1,8 @@
-const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'development',
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'public/js'),
@@ -34,16 +33,6 @@ module.exports = {
       }]
     }]
   },
-  devServer: {
-    devMiddleware: {
-      writeToDisk: true
-    },
-    static: {
-      directory: path.join(__dirname, 'public')
-    },
-    historyApiFallback: true,
-    hot: true
-  },
   externals: {
     vue: 'Vue'
   },
@@ -51,4 +40,4 @@ module.exports = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin()
   ]
-}
+};
