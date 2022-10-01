@@ -1,5 +1,10 @@
+import { faker } from '@faker-js/faker';
+
 describe('sanity test', () => {
   it('testing configuration', () => {
-    expect(1).toBe(1);
+    const name = faker.internet.userName();
+    const message = `Hello ${name}, are you okay?`;
+
+    expect(message).toContain(name);
   });
 });

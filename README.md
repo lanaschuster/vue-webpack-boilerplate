@@ -11,7 +11,7 @@ This is a Vue 3 + Webpack 5 boilerplate project, which might help you to have a 
 - Storybook
 - Jest
 - Vue Test Utils
-- ~~Faker.js~~ (not ready)
+- Faker.js
 - Husky
 - Lint Staged
 - ESLint
