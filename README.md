@@ -16,8 +16,9 @@ This is a Vue 3 + Webpack 5 boilerplate project, which might help you to have a 
 - Lint Staged
 - ESLint
 - ~~Vue Router~~ (not ready)
-- ~~Pinia~~ (not ready)
 - ~~Axios~~ (not ready)
+- ~~Pinia~~ (not ready)
+- ~~i18n~~ (not ready)
 
 ## Setup
 
