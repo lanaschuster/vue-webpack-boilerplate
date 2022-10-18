@@ -15,8 +15,8 @@ This is a Vue 3 + Webpack 5 boilerplate project, which might help you to have a 
 - Husky
 - Lint Staged
 - ESLint
-- ~~Vue Router~~ (not ready)
-- ~~Axios~~ (not ready)
+- Vue Router
+- Axios
 - ~~Pinia~~ (not ready)
 - ~~i18n~~ (not ready)
 

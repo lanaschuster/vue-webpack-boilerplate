@@ -4,3 +4,4 @@ public/js
 coverage
 .husky
 yarn-error.log
+.env

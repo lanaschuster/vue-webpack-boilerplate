@@ -1,6 +1,9 @@
 const path = require('path');
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+const TerserPlugin = require("terser-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
@@ -38,6 +41,14 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new VueLoaderPlugin()
-  ]
+    new VueLoaderPlugin(),
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      __VUE_PROD_DEVTOOLS__: 'false'
+    })
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
 };
