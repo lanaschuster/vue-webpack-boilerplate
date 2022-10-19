@@ -9,8 +9,8 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'public/js'),
-    publicPath: '/public/js',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    chunkFilename: 'js/[name].bundle.js',
   },
   resolve: {
     alias: {
