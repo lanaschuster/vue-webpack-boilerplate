@@ -1,9 +1,8 @@
-import { GetProductsRepository } from '../../repository/getProductsRepository';
 import { Pagination } from '@/modules/pagination/domain/model/pagination';
 
 export class GetProductsUseCase {
-  constructor(repository = null) {
-    this.repository = repository ?? new GetProductsRepository();
+  constructor(repository) {
+    this.repository = repository;
   }
 
   async execute(params) {
@@ -15,7 +14,7 @@ export class GetProductsUseCase {
       search: params.search
     });
 
-    const productPagination = await this.repository(pagination);
+    const productPagination = await this.repository.execute(pagination);
     return productPagination;
   }
 }
