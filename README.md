@@ -5,6 +5,7 @@ This is a Vue 3 + Webpack 5 boilerplate project, which might help you to have a 
 - Vue 3
 - Webpack 5
 - Babel
+- Bulma
 - Sass Loader
 - Storybook
 - Jest
@@ -15,7 +16,6 @@ This is a Vue 3 + Webpack 5 boilerplate project, which might help you to have a 
 - ESLint
 - Vue Router
 - Axios
-
 
 It is on the roadmap:
 - Pinia

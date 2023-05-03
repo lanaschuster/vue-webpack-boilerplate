@@ -1,15 +1,38 @@
 <template>
   <section>
-    <div
-      v-for="(product, index) in controller.productPagination.items"
-      :key="index"
-      class="product-item"
-    >
-      <strong>{{ product.title }}</strong>
-      <span>{{ product.description }}</span>
-      <span>{{ product.price }}</span>
-      <hr>
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Produto</th>
+          <th>Título</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="(product, index) in controller.productPagination.items"
+          :key="index"
+        >
+          <td>{{ product.id }}</td>
+          <td>
+            <img 
+              :src="product.image"
+              :alt="product.title" 
+              class="image is-96x96"
+            >
+          </td>
+          <td>{{ product.title }}</td>
+          <td>{{ product.category }}</td>
+          <td>R$ {{ product.price }}</td>
+          <td>
+            -
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 
