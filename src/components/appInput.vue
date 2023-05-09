@@ -1,8 +1,10 @@
 <template>
-  <input
+  <FormKit
     v-model="model"
-    class="input" 
-  >
+    :classes="{
+      'input': 'input'
+    }" 
+  />
 </template>
 
 <script setup>
