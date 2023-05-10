@@ -1,6 +1,10 @@
 <template>
   <section>
-    <table class="table">
+    <AppLoading v-if="loading" />
+    <table 
+      v-else 
+      class="table"
+    >
       <thead>
         <tr>
           <th>ID</th>
@@ -37,7 +41,8 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+import AppLoading from '@/components/appLoading.vue';
 
 const props = defineProps({
   controller: {
@@ -46,14 +51,61 @@ const props = defineProps({
   }
 });
 
-onMounted(() => {
-  props.controller.getAll();
+const loading = ref(false);
+
+onMounted(async () => {
+  loading.value = true;
+  await props.controller.getAll();
+  loading.value = false;
 });
 </script>
 
 <style lang="scss" scoped>
+section {
+  display: flex;
+  justify-content: center;
+}
 .product-item {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+  thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+  tbody tr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  td { 
+		border: none !important;
+    border-bottom: 1px solid #eee !important; 
+		position: relative;
+		padding-left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	}
+  td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
+tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 0.5fr;
+}
+td {
+  display: flex;
+  align-items: center;
 }
 </style>
