@@ -61,6 +61,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@formkit/vue": "^0.16.5",
     "axios": "^1.1.2",
     "storybook-css-modules-preset": "^1.1.1",
     "vue": "^3.2.39",
